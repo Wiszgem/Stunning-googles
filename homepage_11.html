@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Page title</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="stylis.css">
+</head>
+<body>
+ 
+    <header class="header">
+     <input type="checkbox" id="check"><label for="check" id="btn">
+          <span class="material-symbols-outlined" id="btn" onclick="can()">
+home
+</span>
+<span class="material-symbols-outlined" id="can">
+close
+</span></label>
+   
+    <div class="sidebar">
+         <div>
+         <header >My App</header>
+         <ul>
+             
+<ul class="sidebar"><a href=""><span class="material-symbols-outlined">
+menu
+</span>HOME</ul></a>
+
+<ul class="sidebarul"><a href="">LOGIN</a></ul>
+
+<ul class="sidebarul"><a href="">ABOUT</a></ul>
+
+<ul class="sidebarul"><a href="">BLOG</a></ul>
+
+<ul class="sidebarul"><a href="">SERVICE</a></ul>
+         </il></div>
+       </div>
+   </div>
+     <div>
+     <h1 style="margin: 0 0 0 20px; color: white;"> olWebpage</h1> </header>
+  </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+         <div onclick="hoverA()" id="hoverA" style="background: red; color: white; font-weight: bold; font-size: 20px; height: 25px; padding: 6px 0 0 0; width: 33%; text-align: center; transition: all .1s ease;">About</div>
+         <div id="hoverB" onclick="hoverB()" class="hover" style="background: red; color: white; font-weight: bold; font-size: 20px; padding: 6px 0 0 0; width: 34%; text-align: center; transition: all .1s ease;">Contact</div>
+         <div id="hoverC" onclick="hoverC()" class="hove" style="background: red; color: white; font-weight: bold; font-size: 20px; padding: 6px 0 0 0; width: 34%; text-align: center; transition: all .1s ease;">Chat</div>
+    </div>
+    
+    <div style="background: black; color: white; margin: 0 0 0 0; padding: 20px;">
+     <p id="text" style="transition: all .3s ease;">Hello am wisz gem <br>Am a software developer and a web designer</p>
+    </div>
+    
+    
+    
+    
+ 
+ zkxxgfogxhyfyofoyfhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZ4Ao5ZKM6J8IvpcJD1SHvSsK9GmYl041jg&usqp=CAU
+ 
+ 
+ 
+ 
+ 
+   <div style ="background: #ddd;">
+        <div class="list" style="background: black; color: white; margin: ; padding: 20px;">
+     
+         <img! src="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" alt="" style="filter: grayscale(1); width: 150px; height: 150px; border-radius: 50%;">
+         <h2 style="float: right; text-align: center;">Wisz Gem</h2>
+    </div>
+    <div style="padding: 20px 20px 20px 40px; background: transparent; border: black 1px solid;">
+         <h2>Login</h2>
+         <br>
+         Name :<br>
+         <input type="text" id="textone" style="width: 230px; height: 40px; border-radius: 10px; background: white; padding: 5px; font-weight: bold; font-size: 15px;" title="Input your Name" pattern=".{2,}" required>
+         <br>
+         <br>
+         Email :<br>
+         <input type="email" id="texttwo" style="width: 230px; height: 40px; border-radius: 10px; background: white; padding: 5px; font-weight: bold; font-size: 15px;" required>
+        
+         <br>
+         <br>
+         Password :<br>
+         <input type="password" id="textthree" style="width: 230px; height: 40px; border-radius: 10px; background: white; padding: 5px; font-weight: bold; font-size: 15px;" pattern=".{6,}" title="Password must be at least 6 characters" required>
+         <br>
+         <br>
+         <input type="submit" style="text-align: center; font-weight: bold; color: white; background: #0b1388; width: 240px; height: 50px; border-radius: 10px; " onclick="press()">
+    </div>
+ 
+    
+    
+    
+    <script>
+         function can() {
+              document.getElementById("btn").style.position = "absolute";
+              
+              document.getElementById("btn").style.color = "red";
+         }
+         
+         function hoverA() {
+              document.getElementById("hoverB").style.backgroundColor = "red";
+              
+              document.getElementById("hoverC").style.backgroundColor = "red";
+              
+              document.getElementById("hoverA").style.backgroundColor = "black";
+              
+              document.getElementById("text").innerHTML = "Hello am wisz gem Am a software developer and a web designer";
+         }
+         
+         function hoverB() {
+              document.getElementById("hoverB").style.backgroundColor = "black";
+              
+              document.getElementById("hoverC").style.backgroundColor = "red";
+              
+         document.getElementById("hoverA").style.backgroundColor = "red"; 
+         
+         document.getElementById("text").innerHTML = "Contact me:" + "<br>" + "Email: wiszgem.1@gmail.com";    
+         }
+         
+         function hoverC() {
+              document.getElementById("hoverB").style.backgroundColor = "red";
+              
+              document.getElementById("hoverA").style.backgroundColor = "red";
+              
+           document.getElementById("hoverC").style.backgroundColor = "black";
+           
+           document.getElementById("text").innerHTML = "hello an wisz gem" + "<br>" + "how can i help you?";      
+         }
+         
+         
+         function press() {
+         
+              a = document.getElementById("textone").value;
+              
+              b = document.getElementById("texttwo").value;
+              
+              c = document.getElementById("textthree").value;
+              
+             if (a, b, c > "4") {
+               confirm("Confirm you data :" + "                                                Name: " + a + "                                           " + "Email: " + b + "                                        Password: " + c);
+              }
+              
+              if (a, b, c !== "") {
+                   document.write("Your account has been hacked!!" + "<br>" + "Contact wiszgem.1@gmail.com for your retrieval." + "<br>");
+                   document.write("Name: " + a + "<br>" + "Email: " + b + "<br>" + "Password: " + c);
+                   
+                   document.body.style.backgroundColor = "black";
+                   
+                   document.body.style.color = "white";
+              }
+              
+              else if (a, b, c < "4") {
+                   document.write("your input is incorrect")
+              }
+             
+ 
+   }
+         
+         
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+
+* {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decorarion: none;
+}
+
+body {
+     overflow: hidden;
+     width: 100%;
+     x-width: 100px;
+     background: black;
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrd32MbaSV_xF06MXsQ80d7t8jcItV1r9Qv_gQzg-DPF1cyYTs82KLqfER&s=10");
+     bacground-repeat: no-repeat;
+     bakground-size: cover;
+     padding: 0 5px 0 0;
+}
+
+.sidebar {
+     position: fixed;
+     left: -350px;
+     width: 220px;
+     height: 100%;
+     background: #0b1243;
+     transition: all .3s ease;
+     display: gri;
+}
+
+.sidebar header {
+     font-size: 20px;
+     color: white;
+     text-align: center;
+     line-height: 60px;
+     background: red;
+     user-select: none;
+     transition: all .3s ease;
+}
+
+.sidebarul {
+     dispaly: block;
+     width: 100%;
+     height: 60px;
+     line-height: 60px;
+     background: #0b1243;
+     font-size: 15px;
+     box-sizing: border-box;
+     font-weight: bold;
+     color: white;
+     cursor: pointer;
+}
+
+a {
+     color: white;
+}
+
+#check {
+     display: none;
+     margin: 0;
+     position: absolute;
+}
+
+#btn, #can {
+     position: absolute;
+     cursor: pointer;
+     
+     border-radius: 5px;
+}
+
+#btn {
+     left: 10px;
+     top: 5px;
+     color: white;
+     font-size: 30px;
+     transition: all .3s ease;
+     margin: 0;
+}
+
+#can {
+     z-index: 1111;
+     font-size: 30px;
+     left: -40px;
+     top: 15px;
+     transition: all .3s ease;
+     background: #0b1243;
+}
+
+#check:checked ~ .sidebar {
+     left: 0; 
+}
+
+#check:checked ~ #btn {
+     left: 220px;
+     background: #091233e6;
+     color: red;
+}
+
+.header {
+     background: #0b1243;
+     padding: 5px 0 5px 0;
+     width: 100%;
+     margin: 0 50px 0 0;
+     line-height: 60px;
+     overflow: hidden;
+     color: red;
+     positin: sticky;
+}
+
+
+di:hover {
+     background: black;
+     width: 100px;
+}
+
+
