@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Sign_Up_Register</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+      <style>
+           body {
+                overflow: hidden;
+                background-image: linear-gradient(to right, #ff00f1, #ff3f15);
+                display: flex;
+                justify-content: center;
+                text-align: center;
+           }
+           
+          .dvv {
+                border-radius: 20px;
+                border:  black 1px solid;
+                padding: 25px;
+                background: white;
+              margin: 50px 0 0 0;
+              transition: all .3s ease;
+              animation: side 1s linear;
+              box-shadow: 2px -2px 3px red;
+             
+           }
+           
+           @keyframes side {
+          0%{
+                     margin: 50px 0 0 -800px ;
+                }
+                60%{
+                     margin: 50px 0 0 -800px ;
+                }
+                
+                90%{
+                     margin: 50px 0 0 50px ;
+                }
+
+                
+                100% {
+                     margin: 50px 0 0 0;
+
+                }
+           }
+           
+           h3 {
+                text-align: left;
+                margin: 20px 0 10px 0;
+                widh: 10px;
+           }
+           
+           .input {
+                width: 230px;
+                padding: 5px;
+                font-weight: bold;
+                font-size: 16px;
+                height: 40px;
+                border-radius: 10px;
+                
+                border: 1px solid white;
+                box-shadow: 2px 2px 3px 2px grey;
+                background: 
+                margin: 50px 0 0 0;
+                
+           }
+           
+           h1 {
+                color: blue;
+           }
+           
+           hr {
+                height: 5px;
+                border-radius: 30px;
+           }
+           
+           .switch {
+                display: none;
+                transition: all .7s ease;
+           }
+           
+      .text {
+           position: relative; 
+               z-index: 1;
+               color: transparent;
+               }
+ .textt {
+      color: transparent;
+      }
+      
+      .check {
+           display: none;
+      }
+      
+      .chn {
+           display: none;
+      }
+      
+      #cn {
+           background: black;
+           float: right;
+           color: red;
+           margin: 65px 0 450px 240px;
+           position: absolute;
+           padding: 5px;
+           border-radius: 50%;
+           animation: ccn 1s linear;
+      }
+      
+      @keyframes ccn {
+           0% {
+                margin: 65px -250px 450px 240px;
+           }
+           50% {
+                margin: 65px -250px 450px 240px;
+           }
+           100% {
+                margin: 65px 0 450px 240px;
+           }
+      }
+      </style>
+      
+</head>
+<body>
+  <span class="material-symbols-outlined" id="cn">
+close
+</span>
+     <div class="dvv" id="bud">
+           
+        <h1 style="position: absolute; backgrund: white; line-height: 35px; margin: 25px 0 1000px 69px; z-index: 2px;" id="tran" >Sign In<br><br></h1>
+         <h1  class="text" id="hhh">Sign Up
+          <hr width="120px"  height="60px" color="blue"></h1>
+          
+      <h3>Name</h3>
+      
+      <input class="input" type="text" id="yext" placeholder="Username">
+      <div id="cad" class="switch" style="transition: all .6s ease;" >
+           
+           <h3>Email</h3>
+           
+      <input type="email" class="input" placeholder="@gmail.com"></div>
+      
+     <h3><span id="chn" class="chn">Create </span>Password </h3>
+      
+      <input class="input" type="password" placeholder="Password" >
+      <br><br>
+     <div id="check"><input type="checkbox" style=""><span style=" text-align: left; margin: 10px 120px 0 0">Remember me</h4></span><br></div>
+      <br>
+      <a href="ttps://wa.me/2349160941527/"><input type="submit" nclick="tol()" style="width: 250px; height: 60px; background: #1538ffd6; text-align: center; font-weight: bold; border-radius: 15px; position: relative;"></a>
+       <a href="ttps://wa.me/2349160941527/"><input type="submit" nclick="tol()" style="width: 250px; height: 60px; background: #1538ffd6; text-align: center; font-weight: bold; border-radius: 15px; position: absolute; margin: 0 0 0 -250px"></a>
+      <br><br>
+     <span id="footer"> You are not a member</span> <a id="link" style="color: green; flot: right;" onclick="hid()">Sign Up</a>
+     
+    
+     
+    
+     
+ </div>
+ 
+ 
+ 
+
+
+
+
+<script>
+ function hid() {
+ 
+ var element = document.getElementById("cad");
+  element.classList.toggle("switch");  
+ 
+  
+var elemen = document.getElementById("hhh");
+ 
+ elemen.classList.toggle("text");
+  
+  
+  var eleme = document.getElementById("tran");
+ 
+ eleme.classList.toggle("textt");
+  
+   var check = document.getElementById("check");
+ 
+ check.classList.toggle("check");
+  
+   var cn = document.getElementById("chn");
+ 
+ cn.classList.toggle("chn");
+  
+  
+  }
+  
+ 
+  
+  
+  
+</script>
+ 
+</body>
+</html>
