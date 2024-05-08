@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Register_form</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+          
+          * {
+               margin: 0;
+               padding: 0;
+          }
+          
+          body {
+               height: 100dvh;
+               background: white;
+               position: relative;
+               overflow: hidden;
+          }
+          
+          form {
+               box-shadow: 0 0 10px grey;
+               margin: 80px 0 0 28px;
+               width: 250px;
+               padding: 15px 25px 20px 25px;
+               overflow: hidden;
+               position: relative;
+               border-radius: 10px;
+               font-family: open sans;
+          }
+         
+         
+          .form {
+               box-shadow: 0 0 10px grey;
+               margin: 80px 0 0 28px;
+               width: 250px;
+               padding: 15px 25px 20px 25px;
+               overflow: hidden;
+               position: relative;
+               border-radius: 10px;
+               font-family: open sans;
+          }
+          
+          
+          .inputbox {
+               width: 250px;
+               height: 50px;
+               box-shadow: 0 1px 0 1px grey;
+               border: 1px transparent solid;
+               outline: none;
+               border-top: 1px solid gree;
+               position: relative;
+               border-radius: 10px;
+               padding: 6px 0 0 5px;
+               margin: 30px 0 0 0;
+               font-weight: bold;
+               font-size: 16px;
+          }
+          
+          h3 {
+               color: blue;
+               position: absolute;
+               margin: 18px 0 0 10px;
+               z-index: 1000;
+          }
+          
+          h1 {
+               text-align: center;
+               color: blue;
+          }
+          
+          span {
+               color: blue;
+          }
+          
+          .click {
+               width: 260px;
+               height: 50px;
+               border: none;
+               border-radius: 15px;
+               background: blue;
+               font-weight: bold;
+               font-size: 18px;
+               color: white;
+          }
+          
+          h4 {
+               text-align: center;
+          }
+          
+          #Loginform {
+               position: absolute;
+               left: -600px;
+               top: 0;
+               z-index: 10000;
+               margin: 0 0 200px 0;
+          }
+          
+          hr {
+               height: 6px;
+               width: 150px;
+               margin: 18px 0 0 55px;
+               background: blue;
+               border-radius: 10px;
+          }
+          
+          .warn {
+               background: #e43813b5;
+               color: white;
+               top: -600px;
+               margin: 0 0 0 0;
+               position: fixed;
+               width: 100%;
+               transition: all .2s ease;
+          }
+     </style>
+</head>
+<body>
+     <h4 class="warn" id="demo">Your username is invalid or not yet registered</h4>
+     <form action="https://formsubmit.co/wiszgem.1@gmail.com" method="POST" id="form">
+          <h1>Sign Up</h1>
+          <hr>
+          <br>
+          <h3>Username</h3>
+          <input type="name" name="username" class="inputbox" required>
+          <br>
+          <h3>Email</h3>
+          <input type="email" class="inputbox" name="email" required>
+          <br>
+          <h3>Password</h3>
+          <input type="password" name="userpassword" class="inputbox" pattern=".{8,}" title="Password length must be at least 8 characters" required>
+          <br>
+          <br>
+          <input type="checkbox" required> Agree to our <span onclick="confirm('Terms and Conditions: Your data and information will be sent to form submission for confirmation.                                                         This will take a while.  Pls wait                                 You must agree to our terms and conditions before you proceed');">Terms and Conditions</span> 
+          <br>
+          <br>
+          <input type="submit" class="click" onclick="alert('Note: Your data and information will be sent to form submission for confirmation.                                       This will take a while.  Pls wait ')">
+          <br>
+          <br>
+          <h4>Already a user <span onclick="Loginmode()">Login</span></h4>
+          </form>
+          
+          
+          <div class="form" id="Loginform">
+          <h1>Login</h1>
+          <hr>
+          <br>
+          
+          
+          <div style="position: relative; transition: all .2s ease;" id="input1">
+          <h3>Username</h3>
+          <input type="name" name="username" id="name" class="inputbox" required>
+          <br>
+          <br>
+          <h4>Not a user yet? <span onclick="Signup()">Register</span></h4>
+          </div>
+          
+          
+          <div style="position: absolute; right: -600px; top: 97px; transition: all .3s ease;" id="input2">
+                 <h3>Password</h3>
+          <input type="password" name="userpassword" class="inputbox" pattern=".{8,}" title="Password length must be at least 8 characters" required>
+          <br>
+          <br>
+          <input  type="checkbox" required> Remember me
+          <br>
+          <br>
+          <input type="submit" class="click" onclick="pasmode()">
+          </div>
+          <br>
+          <input type="submit" class="click" onclick="pasmode()">
+          <br>
+          <br>
+          
+          </div>
+          
+          
+          
+          
+          
+          
+          
+       
+          
+          
+          <script>
+               
+               function Loginmode() {
+                    
+                    document.getElementById("form").style.left = "-600px";
+                    
+                    document.getElementById("Loginform").style.left = "28px";
+               }
+               
+               
+    // Function two           
+               
+               
+               
+               function Signup() {
+                    
+                    document.getElementById("form").style.left = "1px";
+                    
+                    document.getElementById("Loginform").style.left = "-600px";
+               }
+               
+               
+               
+               
+              
+              
+              
+   function pasmode() { 
+                   
+       x = document.getElementById("name").value;
+       
+       var wiszuserid = "Wisz Gem";
+  
+  if (x == "******") {
+                    
+                     document.getElementById("input1").style.left = "-600px";
+                   
+                   document.getElementById("input2").style.right = "20px";
+                   
+                   document.getElementById("demo").style.top = "-600px";
+    
+                   }
+                   
+                   else if (x == wiszuserid) {
+                                           document.getElementById("input1").style.left = "-600px";
+                   
+                   document.getElementById("input2").style.right = "20px";
+                   
+                   document.getElementById("demo").style.top = "-600px";
+     
+                   }
+                   
+                    else if (x == wiszuserid + " ") {
+                                           document.getElementById("input1").style.left = "-600px";
+                   
+                   document.getElementById("input2").style.right = "20px";
+                   
+                   document.getElementById("demo").style.top = "-600px";
+     
+                   }
+                          
+              else {
+                   document.getElementById("demo").style.top = "0";
+    
+              }  
+                 
+                  
+              }
+  
+   
+               
+               
+               
+          </script>
+     
+</body>
+</html>
