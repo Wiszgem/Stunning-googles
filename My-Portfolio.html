@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Page title</title>
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style type="text/css">
+          
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+          * {
+               margin: 0;
+               padding: 0;
+               font-family: 'poppins', sans-serif;
+               transition: all .2s ease;
+          }
+          
+          body {
+               background: #161922;
+          }
+          
+         nav ul li a:target {
+               transition: all .2s ease;
+               margin: 60px 0;
+               border: 2px solid #f3c36f;
+          }
+          
+         nav ul li a:hover {
+               color: #f3c36f;
+               border-color: transparent transparent #f3c36f transparent;
+               order: 2px solid;
+          }
+          
+          .homepage > p {
+               display: flex;
+               flex-wrap: wrap;
+               width: 350px;
+          }
+          
+          .sub-header {
+               font-size: 4em;
+               position: absolute;
+               left: 35%;
+               opacity: 0.1;
+               font-weight: 600;
+               top: 525px;
+               margin: 20px 0;
+          }
+          
+          p {
+               font-size: 14px;
+               opacity: 0.855;
+          }
+          
+          span {
+               color: #f3c36f;
+          }
+          
+          section {
+               background: #191d28;
+               color: white;
+               min-height: 510px;
+               width: 100%;
+               transition: all .2s ease;
+          }
+          
+          section:nth-child(even) {
+               background: #161922;
+          }
+          
+          header {
+               padding: 1em 2em;
+               background: #191d28;
+               position: fixed;
+               z-index: 1000;
+               width: 100%;
+               z-index: 1000px;
+          }
+          
+          header > h2 {
+               font-weight: 500;
+          }
+          
+          header > i {
+               position: fixed;
+               right: 50px;
+               font-size: 20px;
+               top: -600px;
+               transition: all .2s ease;
+               }
+          
+          nav {
+    position: fixed;
+    top: 11px;
+    right: 60px;
+    width: 50%;
+    background: transparent;
+    color: white;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    adding: 10px 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+    transition: all .2s ease;
+}
+.homepage > h1 {
+               font-weight: 400;
+               font-size: 2.5em;
+          }
+          
+          .homepage {
+               padding: 180px 35px 0;
+               height: 400px;
+          }
+          
+          .homepage > img {
+               position: absolute;
+               right: 60px;
+               top: 150px;
+               width: 400px;
+          }
+          
+          .homepage > h2 {
+               font-weight: 600;
+               font-size: 1.6em;
+          }
+          
+          .cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: #f3c36f;
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes link-caret {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #f3c36f;
+  }
+}
+         
+          .contact {
+               position: absolute;
+               left: 30px;
+               top: 370px;
+               
+               }    
+          .C-V-button {
+              top: 350px;
+              left: 35px;
+              width: 150px;
+              height: 32px;
+              background: #f3c36f;
+              border-radius: 10px;
+              margin: 0 15px 10px 5px;
+              border: none;
+          }
+          
+          .L-T-button {
+              top: 350px;
+              left: 160px;
+              width: 100px;
+              height: 32px;
+              background: transparent;
+              border: 2px solid #f3c36f;
+              border-radius: 10px;
+              color: white;
+          }
+          
+          .L-T-button:hover::after {
+               background: #f3c36f;
+               content: "Let's talk";
+               position: absolute;
+               width: 100px;
+               padding: 5px 0;
+               left: 175px;
+               border-radius: 10px;
+               height: 20px;
+               overflow: hidden;
+               top: 0;
+               animation: L-T-B 0.2s linear;
+               color: black;
+          }
+          
+          @keyframes L-T-B {
+               from {
+                    width: 0;
+                    scale: 0.1;
+                    
+               }
+               to {
+                    width: 100px;
+                    scale: 1;
+               }
+          }
+          
+          .contact-btn {
+               position: absolute;
+               left: 30px;
+               top: 30px;
+          }
+          
+          .contact-icon {
+               background: ;
+               height: 20px;
+               position: absolute;
+               top: 520px;
+               left: 400px;
+               gap: 10px;
+               display: flex;
+          }
+          
+          .contact-icon a i {
+               color:  #f3c36f;
+               font-size: 17px;
+               height: 20px;
+          }
+          
+          .profile-card > .sub-heading {
+               color: #f3c36f;
+               font-weight: 600;
+               position: absolute;
+               top: 655px;
+               left: 435px;
+          }
+          
+          .profile-card > .line-header {
+               position: absolute;
+               top: 690px;
+               left: 415.5px;
+               width: 130px;
+               height: 5px;
+               border-radius: 30px;
+               background: white;
+               border: none;
+               opacity: 0.9;
+          }
+          
+          .profile-card > .line-header::after {
+               content: "";
+               position: absolute;
+               height: 100%;
+               width: 50%;
+               background: #f3c36f;
+               left: 31px;
+          }
+          
+          .profile-card {
+               width: 80%;
+               height: 570px;
+               display: flex;
+               align-item: center;
+               justify-content: center;
+               padding: 140px 0 0 120px;
+               gap: 25px;
+               display: flex;
+               margin: 0 0 0 0;
+          }
+          
+          .profile-card > img {
+               width: 350px;
+               height: 250px;
+               argin: 60px 0 0 60px;
+          }
+          
+          .description {
+               height: 80%;
+               overflow: hidden;
+               argin: 60px 0;
+          }
+          
+          .description > h1, h3 {
+               font-weight: 500;
+          }
+          
+          .descript {
+               width: 80%;
+               display: flex;
+               flex-wrap: wrap;
+          }
+          
+          .skill-sub-heading {
+               color: #f3c36f;
+               position: absolute;
+               transform: rotate(-90deg);
+               top: 61.3em;
+               left: 50px;
+          }
+          .skill-line-header {
+               transform: rotate(90deg);
+               position: absolute;
+               top: 72.5em;
+               left: 33px;
+               width: 110px;
+               height: 5px;
+               border-radius: 30px;
+               background: white;
+               border: none;
+               opacity: 0.8;
+          }
+          
+           .skill-line-header::after {
+               content: "";
+               position: absolute;
+               height: 100%;
+               width: 50%;
+               background: #f3c36f;
+               left: 27px;
+          }
+          
+          .box {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 35px;
+               row-gap: 50px;
+               width: 100%;
+               align-item: center;
+               justify-content: center;
+               position: absolute;
+               top: 1075px;
+               left: 0;
+          }
+          
+          .bar-element {
+               background: black;
+               width: 350px;
+               height: 4px;
+               border-radius: 10px;
+               opacity: 0.8;
+          }
+          
+          #bar-element1::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 31%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element2::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 29%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element3::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 33%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element4::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 31%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+          .box p {
+               font-size: 15px;
+               color: white;
+          }
+          .box span {
+               color: white;
+          }
+          
+          .C-V-btn {
+              width: 100px;
+              height: 30px;
+              background: #f3c36f;
+              border: none;
+              border-radius: 10px;
+              margin: 60px 0 0;
+          }
+          
+          .expertise {
+               overflow: hidden;
+               font-size: 13px;
+          }
+          
+          .expertise > h2 {
+               text-align: center;
+               color: #f3c36f;
+               margin: 40px 0 0;
+          }
+          
+          .expertise > .line-header {
+               position: absolute;
+               top: 105em;
+               left: 430px;
+               width: 120px;
+               height: 5px;
+               border-radius: 30px;
+               background: white;
+               border: none;
+               opacity: 0.8;
+          }
+          
+          .expertise > .line-header::after {
+               content: "";
+               position: absolute;
+               height: 100%;
+               width: 65%;
+               background: #f3c36f;
+               left: 22px;
+          }
+          
+slider {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    padding: 60px 290px 0 0;
+    background: transparent;
+    margin: 0 100px;
+}
+
+.slider {
+            width: 40%;
+            max-width: 200px;
+            position: relative;
+            overflow: hidde;
+            order: 2px solid #ddd;
+            background: transparent;
+            padding: 60px 10px;
+            box-shadow: 0 4px 10px black;
+            border-radius: 10px;
+            margin: 100px 300px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+            width: 200%;
+        }
+
+        .slide {
+            width: 35.333%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide img {
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .slide > h3 {
+             color: #f3c36f;
+        }
+
+        .slide p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .navigation-dots {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #f3c36f;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #985e00db;
+        }
+
+        /* Keyframes for automatic sliding */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33.333% { transform: translateX(-33.333%); }
+            66.666% { transform: translateX(-66.666%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Zoom effect for the centered image */
+        .slide img {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide.zoom img {
+            transform: scale(1.2);
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+          @media (max-width: 700px) {
+               body {
+                    width: 100%;
+                    argin: 0 10px;
+               }
+               section {
+                    height: 100%;
+               }
+               header {
+                    height: 40px;
+                    overflow: hidden;
+                    adding: 0;
+               }
+               header > i {
+                    transition: transform .2s ease;
+                    top: 25px;
+               }
+               nav {
+                    position: relative;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+              
+              }
+              nav ul {
+                    width: 100%;
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    ustify-content: center;
+                    top: 65px;
+                    background: transparent;
+                    position: relative;
+                    color: ;
+                    height: 300px;
+                    left: 0;
+                    overflow: hidden;
+                    z-index: 100;
+                    transition: all .2s ease;
+                    opacity: 0.9;
+                    argin: 0 120px 0 0;
+                    text-align: center;
+                    padding: 0 0 0 30px;
+                    gap: 1px;
+               }
+               
+               .oen-bar {
+                    width: 360px;
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    ustify-content: center;
+                    top: 68px;
+                    background: black;
+                    position: relative;
+                    color: ;
+                    height: 400px;
+                    left: 0;
+                    overflow: hidden;
+                    z-index: 100;
+                    transition: all .2s ease;
+                    opacity: 0.9;
+               }
+               
+               .homepage {
+                    padding: 450px 20px 10px 20px;
+               }
+               .homepage > img {
+                    width: 100%;
+                    height: 250px;
+                    position: absolute;
+                    left: 0;
+                    top: 90px;
+               }
+               
+               .homepage > h2 {
+                    font-weight: 400;
+                    font-size: 1.5em; 
+               }
+               
+               .homepage > p {
+                    width: 100%;
+               }
+               
+               .contact {
+                    position: absolute;
+                    top: 720px;
+                    left: 20px;
+               }
+               .profile-card {
+               width: 90%;
+               padding: 100px 15px 600px;
+               margin: 0;
+               display: flex;
+               align-item: center;
+               flex-wrap: wrap;
+               height: 100%;
+               flex-direction: column-reverse;
+               text-align: center;
+               }
+               .sub-header {
+                    position: absolute;
+                    width: 200px;
+                    font-size: 2em;
+                    top: 785px;
+                    left: 70px;
+               }
+              .profile-card > .sub-heading {
+                    top: 50em;
+                    Font-size: 18px;
+                    left: 130px;
+               }
+              .profile-card > .line-header {
+                    top: 58em;
+                    left: 110px;
+                    height: 3.5px;
+               }
+               .profile-card img {
+                    width: 100%;
+                    height: 250px;
+                    margin: 0;
+               }
+               .description {
+                    width: 100%;
+                    padding: 
+                    margin: 0;
+               }
+               .descript {
+                    width: 100%;
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+               }
+               .info {
+                    width: 80%;
+                    text-align: left:
+                    display: flex;
+                    flex-wrap: wrap;
+                    row-gap: 15px;
+                    flex-direction: row;
+                   margin: 15px 10px 0 20px;
+               }
+               .info > p {
+                    text-align: left;
+                    width: 80px;
+                    flex-wrap: wrap;
+               }
+               .C-V-btn {
+                    width: 300px;
+                    height: 35px;
+               }
+               .drop-bar {
+                    height: 300px;
+               }
+               .skill-sub-heading {
+                    top: 90em;
+                    transform: none;
+                    left: 44%;
+               }
+               .skill-line-header {
+                    top: 107.3em;
+                    transform: none;
+                    left: 34%;
+               }
+               .box {
+                    top: 110em;
+                    gap: 10px;
+               }
+               .bar-element {
+                    width: 300px;
+               }
+               #bar-element1::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 80%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element2::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 74%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element3::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 80%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+              #bar-element4::after {
+               position: absolute;
+               content: "";
+               background: #f3c36f;
+               width: 80%;
+               height: 5px;
+               border-radius: 10px;
+          }
+          
+          .contact-icon {
+               top: 800px;
+               left: 40px;
+           }
+           
+          
+          }
+     </style>
+</head>
+<body>
+          
+     <section class="section" id="section1">
+          <header id="header">
+               <h2>Gem<span>Folio</span>.</h2>
+               <nav>
+        <ul class="open-bar" id="openbar">
+            <li class="nav-item"><a href="#section1">Home</a></li>
+            <li class="nav-item"><a href="#section2">About</a></li>
+            <li class="nav-item"><a href="#section3">Skill</a></li>
+            <li class="nav-item">
+                 <a href="#section4">Blog</a>
+            </li>
+            <li class="nav-item"><a href="#section5">Services</a></li>
+            <li class="nav-item"><a href="#section6">Contact</a></li>
+        </ul>
+    </nav>
+               <i class="fa-solid fa-bars fa-beat-fade" style="color: #ffffff;" id="open" onclick="activatebar()"></i>
+               <h3 style="position: absolute; top: 20px; left: 100px;" onclick="dropBar()"></h3>
+          </header>
+          
+          <div class="homepage">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2rxbj2XUOLHb9xJlVJXvBF8dZR4Gpe-V9JddbgUvne9ieAacYYxo7Os&s=10">
+               <h5>Hello, I Myself</h5>
+               <h1>Wisz Gem</h1>
+               <h2>And I'm a <span id="typed-words" style="color: #f3c36f;"></span>
+    <span class="cursor" id="cursor"><span style="color: transparent;">.</span></span></h2>
+               <h2></h2>
+               <p>i have passion for building Amazing webpages and designs, Take a look around and let's see how we can help you reach your goal</p>
+          </div>
+          <div class="contact">
+          <a href="#."><button class="C-V-button">Download CV</button></a>
+               <a href="#."><button class="L-T-button">Let's talk</button></a>
+               </div>
+          <div class="contact-icon">
+               <a href="https://www.facebook.com/wisz.okekhian.5"><i class="fa-brands fa-facebook"></i></a>
+               <a href="https://x.com/wokekhian59783"><i class="fa-brands fa-x-twitter"></i></a>
+               <a href="https://github.com/Wiszgem"><i class="fa-brands fa-github"></i></a>
+               <a href="https://wa.me/09160941527"><i class="fa-brands fa-whatsapp"></i></a>
+               <i class="fa-brands fa-linkedin-in"></i>
+               <i class="fa-brands fa-instagram"></i>
+          </div>        
+     </section>
+     <section class="section" id="section2">
+          <div class="profile-card">
+               
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2rxbj2XUOLHb9xJlVJXvBF8dZR4Gpe-V9JddbgUvne9ieAacYYxo7Os&s=10" alt="">
+               <div class="description">
+                    <h1>Hi There! I'm <span>Wisz Gem</span></h1>
+                    <h4><span>Fullstack Developer</span></h4>
+             <p class="descript">Am a Font-end Developer and a graphic designer with a passion for creating extraordinary experiences and amazing creativity.</p>
+               <button class="C-V-btn">Download CV</button>
+               </div>
+               <h3 class="sub-heading">ABOUT ME</h3>
+               <hr class="line-header">
+               </div>
+               <h3 class="skill-sub-heading">Skill</h3>
+               <div class="skill-line-header"></div>
+          </div>
+   
+      <div class="section" id="section3">
+               <div class="box">
+              <div>
+                    <p>UI / UX DESIGN<span style="float: right;">90%</span></p> <br>
+               <div class="bar-element" id="bar-element1"></div>
+               </div>
+               
+               <div>
+                    <p>MARKETING<span style="float: right;">85%</span></p><br>
+                <div class="bar-element" id="bar-element2"></div>
+                </div>
+                
+                <div>
+                      <p>WEB DEVELOPMENT<span style="float: right;">97%</span></p> <br>
+               <div class="bar-element" id="bar-element3"></div>
+               </div>
+               <div>
+                       <p>FULLSTACK  <span style="float: right;">93%</span></p> <br>
+                  <div class="bar-element" id="bar-element4"></div>
+                  </div>
+          </div>
+           </section>
+          <section class="expertise">
+               <h2>Expertise</h2>
+               <div class="line-header"></div>
+               <div class="slider">
+         <div class="slides">
+            <div class="slide s1">
+                <h3>Web Design</h3>
+                <p>Portfolio Item 1</p>
+            </div>
+            <div class="slide s2">
+                <h3>Marketing</h3>
+                <p>Portfolio Item 2</p>
+            </div>
+            <div class="slide s3">
+                <h3>Backend DB</h3>
+                <p>Portfolio Item 3</p>
+            </div>
+        </div>
+        <div class="navigation-dots">
+            <div class="dot" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </div>
+          </section>
+    <section id="section4" class="section">Section 4 Content</section>
+    <section id="section5" class="section">Section 5 Content</section>
+    <section class="section" id="section6">
+         
+    </section>
+          
+
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item a');
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navItems.forEach(item => {
+                    item.style.color = '';
+                    item.style.borderBottomColor = 'transparent';
+                });
+                const activeItem = document.querySelector(`.nav-item a[href="#${entry.target.id}"]`);
+                activeItem.style.color = '#f3c36f'; // Change this to the desired text color
+                activeItem.style.borderBottomColor = '#f3c36f'; // Change this to the desired border bottom color
+            }
+        });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+});
+
+
+
+
+function activatebar() {
+x = document.getElementById("header").style.height;
+
+y = "0";
+
+document.getElementById("header").style.height = "400px";
+
+if (x === "400px") {
+document.getElementById("header").style.height = "40px";
+}
+else if (x = "40px") {
+     document.getElementById("header").style.height = "400px";
+}
+
+
+             const icon = document.getElementById('open');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+}
+
+
+}
+
+
+
+
+
+
+
+
+/*const words = ["Fullstack Developer", "UI/IX Designer", "Software Engineer"];
+let wordIndex = 0;
+let charIndex = 0;
+const typingSpeed = 80;
+const backSpeed = 30;
+const delayBetweenWords = 1500;
+const typedElement = document.getElementById('typed-words');
+const cursorElement = document.getElementById('cursor');
+
+function typeWord() {
+  if (charIndex < words[wordIndex].length) {
+    typedElement.innerHTML += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWord, typingSpeed);
+  } else {
+    setTimeout(eraseWord, delayBetweenWords);
+  }
+}
+
+function eraseWord() {
+  if (charIndex > 0) {
+    typedElement.innerHTML = typedElement.innerHTML.slice(0, -1);
+    charIndex--;
+    setTimeout(eraseWord, backSpeed);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWord, typingSpeed);
+  }, () => {
+  setTimeout(typeWord, typingSpeed);
+});*/
+
+
+
+const words = ["Fullstack Developer", "UI / UX Designer", "Software Engineer"];
+let wordIndex = 0;
+let charIndex = 0;
+const typingSpeed = 80;
+const backSpeed = 30;
+const delayBetweenWords = 1500;
+const typedElement = document.getElementById('typed-words');
+const cursorElement = document.getElementById('cursor');
+
+function typeWord() {
+  if (charIndex < words[wordIndex].length) {
+    typedElement.innerHTML += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWord, typingSpeed);
+  } else {
+    setTimeout(eraseWord, delayBetweenWords);
+  }
+}
+
+function eraseWord() {
+  if (charIndex > 0) {
+    typedElement.innerHTML = typedElement.innerHTML.slice(0, -1);
+    charIndex--;
+    setTimeout(eraseWord, backSpeed);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWord, typingSpeed);
+  }let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const slideWidth = document.querySelector('.slide').offsetWidth + 20; // slide width + margin-right
+
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+    slides.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(typeWord, typingSpeed);
+});
+
+
+
+
+
+
+
+const dots = document.querySelectorAll('.dot');
+        const slides = document.querySelector('.slides');
+        const slideWidth = document.querySelector('.slide').offsetWidth;
+        let currentIndex = 0;
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function showSlide(index) {
+            slides.style.transform = `translateX(${-index * slideWidth}px)`;
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % dots.length;
+            showSlide(currentIndex);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                showSlide(slideIndex);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the initial dot state
+            updateDots();
+            // Start the automatic sliding
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        });
+
+        // Add a class to the centered slide for zoom effect
+        function updateZoom() {
+            const slidesArray = Array.from(document.querySelectorAll('.slide'));
+            slidesArray.forEach((slide, index) => {
+                slide.classList.toggle('zoom', index === currentIndex);
+            });
+        }
+
+        function handleSlideChange() {
+            showSlide(currentIndex);
+            updateZoom();
+        }
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % dots.length;
+            handleSlideChange();
+        }, 3000); // Change slide every 3 seconds
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the initial dot state
+            updateDots();
+            updateZoom();
+            // Handle dot clicks
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                    currentIndex = slideIndex;
+                    handleSlideChange();
+                });
+            });
+        });
+     </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
