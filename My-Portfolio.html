@@ -122,7 +122,7 @@ nav ul li a {
           
           .homepage {
                padding: 180px 35px 0;
-               height: 400px;
+               height: 390px;
           }
           
           .homepage > img {
@@ -218,8 +218,8 @@ nav ul li a {
                background: ;
                height: 20px;
                position: absolute;
-               top: 520px;
-               left: 400px;
+               top: 500px;
+               left: 415px;
                gap: 10px;
                display: flex;
           }
@@ -447,9 +447,9 @@ slider {
             order: 2px solid #ddd;
             background: transparent;
             padding: 60px 10px;
-            box-shadow: 0 4px 10px black;
+            box-shadow: 0 4px 10px #161922, 0 10px 20px #161922;
             border-radius: 10px;
-            margin: 100px 300px;
+            margin: 140px 0 0 380px;
         }
 
         .slides {
@@ -467,8 +467,20 @@ slider {
             justify-content: center;
             text-align: center;
             padding: 20px;
-        }
+            opacity: 0.8;
+           }
 
+        .slider-box {
+             width: 92%;
+             order: 2px white solid;
+             position: absolute;
+             height: 400px;
+             margin: 20px 0 0;
+             
+             z-index: 1000;
+             background: linear-gradient(to right, #191d28, #191d28, transparent, transparent, #191d28, #191d28);
+        }
+        
         .slide img {
             width: 100%;
             max-width: 300px;
@@ -518,11 +530,13 @@ slider {
 
         /* Zoom effect for the centered image */
         .slide img {
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.6s ease-in-out;
         }
 
-        .slide.zoom img {
-            transform: scale(1.2);
+        .slide.zoom {
+            transform: scale(1.35);
+            opacity: 1;
+            }
 
 
 
@@ -794,8 +808,8 @@ slider {
                <a href="https://x.com/wokekhian59783"><i class="fa-brands fa-x-twitter"></i></a>
                <a href="https://github.com/Wiszgem"><i class="fa-brands fa-github"></i></a>
                <a href="https://wa.me/09160941527"><i class="fa-brands fa-whatsapp"></i></a>
-               <i class="fa-brands fa-linkedin-in"></i>
-               <i class="fa-brands fa-instagram"></i>
+               <a href="https://www.linkedin.com/in/wisz-okekhian-b21b47301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+               <a href="https://www.instagram.com/wiszgem?igsh=YzljYTk1ODg3Zg=="><i class="fa-brands fa-instagram"></i></a>
           </div>        
      </section>
      <section class="section" id="section2">
@@ -840,6 +854,7 @@ slider {
           <section class="expertise">
                <h2>Expertise</h2>
                <div class="line-header"></div>
+               <div class="slider-box"></div>
                <div class="slider">
          <div class="slides">
             <div class="slide s1">
@@ -1057,7 +1072,7 @@ const dots = document.querySelectorAll('.dot');
         }
 
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % dots.length;
+            currentIndex = (currentIndex + 0) % dots.length;
             showSlide(currentIndex);
         }
 
