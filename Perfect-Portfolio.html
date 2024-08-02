@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Page title</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+     <style>
+          
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+          * {
+               margin: 0;
+               padding: 0;
+               outline: none;
+               font-family: 'poppins', sans-serif;
+          }
+          
+          body {
+               width: 1024px;
+               height: 200dvh;
+          }
+          
+          section {
+               height: auto;
+               width: 100%;
+               transition: all .2s ease;
+               margin: 0;
+               padding: 0;
+          }
+          
+          a:target {
+               transition: all .2s ease;
+               border: 2px solid: darkblue;
+          }
+          
+          header {
+               display: flex;
+               padding: 1em 2em;
+               background: white;
+               gap: 24em;
+               position: fixed;
+               top: 0;
+               width: 100%;
+               z-index: 10000;
+               background: transparent;
+               transition: all 2s ease;
+          }
+          
+          header > h2 {
+               font-weight: 500;
+               text-transform: uppercase;
+          }
+          
+          header ul {
+               display: flex;
+               gap: 25px;
+               margin: 1em;
+          }
+          
+          header ul li {
+               list-style-type: none;
+          }
+          
+          header ul li a {
+               color: black;
+               text-decoration: none;
+               text-transform: uppercase;
+               font-weight: 500;
+          }
+          
+          header ul li:active a {
+               border-bottom: 2px solid black;
+          }
+          
+          #menuicon {
+               background: transparent;
+               position: fixed;
+               top: -10000px;
+               right: 0;
+               border: 1px solid black;
+               padding: 8px 15px;
+               border-radius: 5px;
+               color: black;
+               transition: all .2s ease;
+               z-index: 100000;
+          }
+          
+          section > main {
+               width: 100%;
+               height: auto;
+               display: flex;
+               align-item: center;
+               justify-content: center;
+               adding: 6em 0;
+          }
+          
+          .home-card {
+               width: 45%;
+               height: auto;
+               padding: 9em 2em;
+          }
+          
+          .home-card > h1 {
+               text-transform: uppercase;
+               font-size: 2.6em;
+               font-weight: 600;
+          }
+          
+          .home-card > p {
+               
+          }
+          
+          .home-card > .hire-me-button {
+               width: 120px;
+               height: 10%;
+               background: black;
+               color: white;
+               border: none;
+               font-weight: bold;
+               text-transform: uppercase;
+               opacity: 0.9;
+               margin: 6% 0;
+          }
+          
+           .home-card > .explore-button {
+               width: 150px;
+               height: 10%;
+               color: black;
+               background: transparent;
+               border: 1px solid black;
+               font-weight: bold;
+               text-transform: uppercase;
+               opacity: 0.9;
+               margin: 6% 0;
+          }
+          
+          .home-card::after {
+               content: "";
+               position: absolute;
+               height: 385px;
+               width: 200px;
+               background: none;
+               left: -13px;
+               border: 14px solid #14141462;
+               top: 160px;
+               opacity: 0.2;
+          }
+          
+          .home-img {
+               width: 45%;
+               height: 535px;
+               background: #e2e2e2;
+               padding: 6em 4em 0 3em;
+               z-indx: 1000;
+               overflow: hidden;
+          }
+          
+          .home-img > img {
+               z-index: 1000;
+               position: absolute;
+          }
+          
+          .home-img-line {
+               content: "";
+               position: absolute;
+               height: 360px;
+               width: 150px;
+               background: none;
+               border: 11px solid white;
+               top: 200px;
+               right: 0;
+               opacity: 0.8;
+               z-index: 1;
+               border-color: white transparent;
+          }
+          
+          .scrolled {
+               background: white;
+               box-shadow: 0 0 20px grey;
+          }
+          
+          section .about {
+               width: 100%;
+               height: 500px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               display: flex;
+               flex-direction: column;
+               gap: 3px;
+          }
+          
+          section .about h1 {
+               font-size: 2.5em;
+               font-weight: 400;
+          }
+          .underline {
+               display: flex;
+               flex-direction: column;
+               gap: 3px;
+               align-items: center;
+               justify-content: center;
+          }
+          .line {
+               width: 80px;
+               height: 2px;
+               background: black;
+          }
+          
+          .sub-line {
+               width: 50px;
+               height: 2px;
+               background: black;
+          }
+          
+          section .about h1 {
+               font-size: 2em;
+               font-weight: 400;
+          }
+          section .about p {
+               width: 55%;
+               text-align: center;
+               margin: 2em 0 0;
+               opacity: 0.9;
+          }
+          
+          section .about .button {
+               height: 45px;
+               width: 180px;
+               background: black;
+               font-weight: bold;
+               color: white;
+               border: none;
+               margin: 2em 0 0;
+               opacity: 0.9;
+          }
+          
+          section .skill {
+               width: 100%;
+               min-height: 100px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               display: flex;
+               flex-direction: column;
+               gap: 3px;
+          }
+          
+          section .skill h1 {
+               font-size: 2em;
+               font-weight: 400;
+          }
+          
+        
+          .container {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 20px;
+               flex-direction: row;
+               width: 100%;
+               align-items: center;
+               justify-content: center;
+               margin: 4em 0 0;
+               row-gap: 4em;
+          }
+          
+          .bar-container {
+      width: 30%;
+      height: 15px;
+      margin: 20px 0;
+      background-color: #1d1d2723;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      width: 0; /* Start with 0 width */
+      background-color: black;
+      transition: width 1s ease-in-out; /* Smooth transition */
+    }
+    
+    .bar-name {
+         width: 95%;
+         display: flex;
+         row-gap: 100px;
+         column-gap: 130px;
+         position: absolute;
+         flex-wrap: wrap;
+         margin: 65px 0 0;
+    }
+    
+    .bar-name > div {
+         text-align: left;
+         width: 200px;
+    }
+    
+    .service-section {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         margin: 100px 0 0;
+         padding: 0;
+    }
+    
+    .service-img {
+         background-image: url("https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg");
+         width: 100%;
+    }
+    .service-img > img {
+         width: 100%;
+         height: 500px;
+         position: ;
+    }
+    
+    .service-box {
+         width: 90%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         height: 400px;
+         gap: 60px;
+         box-shadow: 0 4px 20px #3a3a3a38;
+         margin: -200px 0 0;
+         background: white;
+         padding: 100px 0;
+    }
+    
+    .service-main {
+         display: flex;
+         align-item: center;
+         justify-content: center;
+         flex-direction: row;
+         text-align: center;
+         width: 100%;
+         height: auto;
+         gap: 6%;
+    }
+    
+    .service-card {
+         display: flex;
+         align-items: center:
+         justify-content: center;
+         width: 25%;
+         flex-direction: column;
+         text-align: center;
+         gap: 20px;
+    }
+    
+    .service-card i {
+         position: ;
+         font-size: 2.5em;
+         display: block;
+         opacity: 0.9;
+         color: black;
+    }
+    
+    
+    
+    .service-card > h2 {
+         font-weight: 500;
+    }
+    
+    .service-header {
+         display: flex;
+         gap: 5px;
+         flex-direction: column;
+         
+    }
+    
+    .service-header > h1 {
+         font-size: 2em;
+         font-weight: 400;
+    }
+    
+    section > .portfolio-box {
+         width: 100%;
+         height: auto;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         gap: 10px;
+         padding: 100px 0;
+    }
+    
+    section > .portfolio-box > h1 {
+         font-size: 2em;
+         font-weight: 400;
+    }
+    
+    .portfolio-web {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: row;
+         flex-wrap: wrap;
+         width: 100%;
+         row-gap: 4%;
+         column-gap: 2%;
+         height: 500px;
+         margin: 40px 0 0;
+    }
+    
+    .portfolio-content {
+         width: 30%;
+         height: 50%;
+    }
+    
+    .portfolio-content > img {
+         width: 100%;
+         height: 100%;
+         position: relative;
+    }
+    
+    .portfolio-content > .img-wrap {
+         position: absolut;
+         background: black;
+         width: 100%;
+         height: 98.5%;
+         margin: -250px 0 0;
+         overflow: hidden;
+         transform: scale(0);
+         background: #2020204e;
+         display: flex;
+         justify-content: flex-end;
+         flex-direction: column;
+    }
+    
+    .portfolio-content > .img-wrap > div {
+         margin: 0 0 10% 10%;
+         color: white;
+         display: flex;
+         flex-direction: row;
+         width: 150px;
+         flex-wrap: wrap;
+         height: auto;
+         row-gap: 10px;
+         column-gap: 15px;
+    }
+    
+    .portfolio-content:hover > .img-wrap {
+         transition: all .2s ease;
+         transform: scale(1);
+    }
+    
+    .img-wrap > div > i {
+         background: none;
+         padding: 11px;
+         border-radius: 50%;
+         border: 2px solid white;
+         transition: all .2s ease;
+    }
+    .img-wrap > div > i:hover {
+         background: white;
+         color: black;
+    }
+    
+    section > .blog {
+         width: 100%;
+         height: 400px;
+         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbhWU9OXJINCfN5JW3hfL0mKJ0R2TLp4yxkg&usqp=CAU");
+         background-size: cover;
+    }
+    
+    .blog > .blog-content {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+         width: 100%;
+         background: #00000069;
+    }
+    
+    .blog-content > div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-conten: center;
+         width: 30%;
+         height: 100%;
+         color: white;
+         text-align: center;
+         padding: 25% 0 0;
+    }
+    
+    .blog-content > div > h1 {
+         font-size: 5em;
+         font-weight: 300;
+    }
+    
+    .blog-content > div > h2 {
+         font-weight: 400;
+    }
+    
+    .contact {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         height: 600px;
+         margin: 100px 0;
+    }
+    
+    .contact-card {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         height: 100%;
+         align-items: center;
+         justify-content: center;
+         gap: 6px;
+    }
+    
+    .contact-card > h1 {
+         font-weight: 400;
+         font-size: 2em;
+    }
+    
+    .contact-box {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         width: 90%;
+         height: 100%;
+         row-gap: 10%;
+         column-gap: 15%;
+         margin: 30px 0 0;
+    }
+    
+    .contact-box > input {
+         width: 40%;
+         height: auto;
+         padding: 10px;
+         border: none;
+         border-bottom: solid 1px black;
+         font-weight: 500;
+         font-size: 20px;
+    }
+    
+    .contact-box > textarea {
+         width: 100%;
+         height: auto;
+         padding: 10px;
+         font-weight: 500;
+         font-size: 20px;
+         border: none;
+         border-bottom: solid 1px black;
+    }
+    
+    .contact-box > .submit {
+         width: 15%;
+         height: 10%;
+         border: 1px black solid;
+         background: none;
+    }
+    
+    .contact-box > .submit:hover {
+         
+    }
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    im {
+         width: 100px;
+         height: 200px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+          
+          
+          
+          @media (max-width: 435px) {
+               body {
+                    width: 100%;
+               }
+               header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    width: 100%;
+                    height: 35px;
+                    overflow: hidden;
+                    background:;
+               }
+               
+               #menuicon {
+                    position: fixed;
+                    top: 0.65em;
+                    right: 1.6em;
+                    z-index: 10000;
+                    font-size: 24px;
+                    max-width: 60px;
+               }
+               header ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: ;
+                    background: white;
+                    height: auto;
+                    width: 76%;
+               }
+               
+               section > main {
+                    width: 100%;
+                    height: auto;
+                    padding: 4em 0;
+                    z-index: 10;
+               }
+               .home-card {
+                    width: 20%;
+                    height: auto;
+                    background: transparent;
+                    z-index: 1000;
+                    padding: 4em 1em;
+                    background: #e2e2e2;
+               }
+               .home-card > .hire-me-button {
+                    height: 50px;
+               }
+               .home-card > .explore-button {
+                    height: 60px;
+               }
+               .home-img {
+                    width: 100%;
+                    padding: 6.5em 0;
+               }
+               .home-img > img {
+                    position: relative;
+                    width: 100%;
+                    height: 300px;
+               }
+               .container {
+                    gap: 1em;
+               }
+               .bar-container {
+                    width: 80%;
+                    height: 15px;
+               }
+               .bar {
+                    ackground: black;
+               }
+               .bar-name {
+                    width: 80%;
+                    row-gap: 50px;
+                    column-gap: 0;
+                    margin: 50px 0 0 0;
+               }
+               .bar-name {
+                    width: 80%;
+                    text-align: left;
+               }
+          .service-img > img {
+               height: 300px;
+               width: 100%;
+          }
+          .service-box {
+               display: flex;
+               flex-direction: column;
+               width: 100%;
+               height: auto;
+               margin: -20px 0 0;
+          }
+          .service-main {
+               display: flex;
+               flex-direction: column;
+               width: 80%;
+               height: auto;
+               gap: 50px;
+          }
+          .service-card {
+               width: 100%;
+          }
+          .portfolio-web {
+               display: flex;
+               gap: 8px;
+          }
+          .portfolio-content {
+               width: 90%;
+          }
+         section > .blog {
+               margin: 950px 0 0 0;
+               height: 600px;
+          }
+          .blog-content {
+               flex-direction: column;
+               gap: 60px;
+               height: 100%;
+          }
+          .blog-content > div {
+               width: 100%;
+               height: 100%;
+               align-items: center;
+               justify-content: center;
+               padding: 0;
+          }
+          }
+          
+          
+          
+          
+          
+         
+          
+          
+          
+          @media (min-width: 440px) and (max-width: 800px){
+               body {
+                    width: 100%;
+                    height: auto;
+               }
+               section > main {
+                    width: 100%;
+                    height: auto;
+               }
+               header {
+                    display: flex;
+                    flex-direction: column;
+                    height: 35px;
+                    column-gap: 1em;
+                    overflow: hidden;
+                    width: 100%;
+                    background:;
+                    padding: 1em 2em;
+                    gap: 1em;
+               }
+               #menuicon {
+                    position: fixed;
+                    right: 2.1em;
+                    top: 0.6em;
+                    font-size: 23px;
+               }
+               header ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+               }
+               .home-card {
+                    width: 45%;
+                    height: auto;
+               }
+               .home-img {
+                    width: 50%;
+                    height: auto;
+                    padding: 5em 6em 0 1em;
+               }
+               .home-img > img {
+                    position: relative;
+                    width: 130%;
+                    height: 520px;
+               } 
+               .bar-name {
+                    width: 95%;
+                    row-gap: 100px;
+                    column-gap: 60px; 
+               }
+          }
+     </style>
+</head>
+<body>
+     
+     <header id="header">
+          <h2>WiszDev.</h2>
+          <div>
+               <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+               </ul>
+          </div>
+     </header>
+     <section id="home">
+          <main>
+               <div class="home-card">
+                    <h1>Wisz Gem</h1>
+                    <p>Full Stack Developer</p>
+                    <button class="hire-me-button">Hire Me</button>
+                    <button class="explore-button">Explore More</button>
+               </div>
+               <div class="home-img">
+                    <img src="https://i.postimg.cc/8zYxt4Gt/organisation-directory-new-landing-03.png" alt="">
+                   
+               </div>
+                <div class="home-img-line"></div>
+          </main>
+     </section>
+       <i class="fa-solid fa-bars fa-fade" onclick="openNav()" id="menuicon"></i>
+       <section id="about">
+            <main class="about">
+                 <h1>ABOUT</h1>
+                 <div class="underline">
+                 <div class="line"></div>
+                 <div class="sub-line"></div>
+                 </div>
+                 <p>Hello! I'm Wisz Gem,a Fullstack Developer, UI / UX Designer, Database Enthusiast, Backend Developer and a guy slightly obessed for code quality.Am also the co-founder if FaithLight.Am currently available for freelance work.if you have a project you want to get started or think you need my help with something, then get in touch. </p>
+                 <button class="button">DOWNLOAD MY CV</button>
+            </main>
+       </section>
+       <section>
+            <main class="skill">
+                 <h1>MY SKILLS</h1>
+                 <div class="underline">
+                      <div class="line"></div>
+                      <div class="sub-line"></div>
+                 </div>
+                 
+                 <div class="container">
+                    <div class="bar-container">
+  <div class="bar" data-percentage="100"></div>
+</div>
+<div class="bar-container">
+  <div class="bar" data-percentage="85"></div>
+</div>
+<div class="bar-container">
+  <div class="bar" data-percentage="60"></div>
+</div>
+<div class="bar-container">
+  <div class="bar" data-percentage="80"></div>
+</div>
+<div class="bar-container">
+  <div class="bar" data-percentage="60"></div>
+</div>
+<div class="bar-container">
+  <div class="bar" data-percentage="50"></div>
+</div>
+                 </div>
+                 <div class="bar-name">
+                      <div>HTML/CSS</div>
+                      <div>JAVASCRIPT</div>
+                      <div>PHP</div>
+                      <div>UI / UX DESIGN</div>
+                      <div>C#</div>
+                      <div>JAVA</div>
+                 </div>
+                     
+                 </div>
+            </main>
+       </section>
+       <section id="service">
+            <div class="service-section">
+                 <div class="service-img">
+            <img src="https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg" alt="">
+            </div>
+            <div class="service-box">
+                 <div class="service-header">
+                 <h1>WHAT I DO</h1> 
+                  <div class="underline">
+                      <div class="line"></div>
+                      <div class="sub-line"></div>
+                 </div> 
+                 </div>
+                 <div class="service-main">
+            <div class="service-card">
+                 <i class="fa-solid fa-desktop"></i>
+           <h2>Font-end</h2>
+                 <p>I am skilled in HTML, CSS, and JavaScript, with experience in frameworks like React and Angular.</p>
+            </div>
+            <div class="service-card">
+                 <i class="fa-solid fa-laptop-code" style="color: #000000;"></i>
+                   <h2>Back-end</h2>
+                   
+                 <p>I am skilled in HTML, CSS, and JavaScript, with experience in frameworks like React and Angular.</p>
+            </div>
+            <div class="service-card">
+                 <i class="fa-solid fa-code" style="color: #000000;"></i>
+                   <h2>Consultancy</h3>
+                 <p>As well as providing development services, i can also help you decide strategy roadmaps via consultancy services.</p>
+            </div>
+            </div>
+            </div>
+       </section>
+       <section class="portofolio" id="portfolio">
+            <div class="portfolio-box">
+                 <h1>MY RECENT WORK</h1>
+                <div class="underline">
+                      <div class="line"></div>
+                      <div class="sub-line"></div>
+                 </div> 
+                 <div class="portfolio-web">
+                   <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                   <div class="img-wrap">
+                        <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>
+                   </div>
+                   </div>   
+                     <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                         <div class="img-wrap">
+                              <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>
+                         </div>
+                         </div>   
+                       <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                       <div class="img-wrap">
+                    <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>       
+                       </div>
+                          </div>   
+                         <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                           <div class="img-wrap">               <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>
+                           </div>
+                            </div>   
+                           <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                            <div class="img-wrap">
+                        <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>        
+                            </div>
+                              </div>   
+                               <div class="portfolio-content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKA7S8PXFZUq7KpSNAYIVzcAy_snwLYQ3ZOHCeInKnEx-riSjgNCDA9Vr&s=10" alt="">
+                            <div class="img-wrap">
+                                 <div>
+                             <h2>Project Title</h2>
+                             <i class="fa-solid fa-rss"></i>
+                             <i class="fa-solid fa-link"></i> 
+                        </div>
+                            </div>
+                                 </div>
+                 </div>
+            </div>
+       </section>
+       <section>
+            <div class="blog">
+                 <div class="blog-content">
+                      <div>
+                           <h1>20</h1>
+                           <h2>Years Experience</h2>
+                      </div>
+                      <div>
+                           <h1>120</h1>
+                           <h2>Projects done</h2>
+                      </div>
+                      <div>
+                          <h1 id="timer">00</h1>
+                           <h2>Seconds on this site!<br>What are you waiting for?</h2>
+                      </div>
+                 </div>
+            </div>
+       </section>
+       
+       <section class="contact" id="contact">
+            <div class="contact-card">
+                 <h1>CONTACT</h1>
+                 <div class="underline">
+                      <div class="line"></div>
+                      <div class="sub-line"></div>
+                 </div> 
+            <div class="contact-box">
+                 <input type="text" placeholder="Name" id="name">
+                 <input type="email" placeholder="Email" id="email">
+                 <textarea rows="8" placeholder="Message"></textarea>
+                 <input type="submit" class="submit">
+            </div>
+            </div>
+       </section>
+     
+      
+ 
+  
+     
+     <script>
+          
+          window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 60) { // Change 50 to the desired scroll position
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    
+    
+    
+    
+    
+    //For the Navigation
+    const y = document.getElementById("header");
+       const icon = document.querySelector("i");
+       
+       y.style.height = "35px";
+       
+       
+    function openNav() {
+       
+        if (y.style.height === "35px") {
+             document.getElementById("header").style.height = "auto";
+             
+            document.getElementById("header").style.background = "white";
+       
+        icon.classList.remove("fa-bars")
+             
+             icon.classList.add("fa-close")
+             
+        }
+        else {
+             document.getElementById("header").style.height = "35px";
+             
+             document.getElementById("header").style.background = "white";
+              icon.classList.remove("fa-close")
+             
+             icon.classList.add("fa-bars")
+             
+        }
+         
+         
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // Function to check if element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to animate bars
+  function animateBars() {
+    const bars = document.querySelectorAll('.bar');
+    bars.forEach(bar => {
+      if (isInViewport(bar) && !bar.classList.contains('animated')) {
+        const percentage = bar.getAttribute('data-percentage');
+        bar.style.width = percentage + '%';
+        bar.classList.add('animated'); // Ensure animation happens only once
+      }
+    });
+  }
+
+  // Event listener for scrolling
+  window.addEventListener('scroll', animateBars);
+
+  // Initial check in case bars are already in view on page load
+  animateBars();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Function to change active class based on scroll position
+  function onScroll() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li');
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 60;
+      if (pageYOffset >= sectionTop) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(li => {
+      li.classList.remove('active');
+      if (li.querySelector('a').getAttribute('href').substring(1) === currentSection) {
+        li.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  function startTimer(display) {
+            let timer = 0;
+            setInterval(function () {
+                display.textContent = (timer < 10 ? "0" + timer : timer);
+                timer++;
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const display = document.querySelector('#timer');
+            startTimer(display);
+        };
+     </script>
+</body>
+</html>
