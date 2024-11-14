@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database/lews-and-sews</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    td {
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact</h1>
+  Stored Contacts
+
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id="messages"></tbody>
+  </table>
+
+  <script>
+    // Function to display all messages from localStorage
+    function displayMessages() {
+      const messages = JSON.parse(localStorage.getItem('messages')) || [];
+      const messagesContainer = document.getElementById('messages');
+
+      // Clear the messages container
+      messagesContainer.innerHTML = '';
+
+      // Check if there are any messages
+      if (messages.length === 0) {
+        messagesContainer.innerHTML = '<tr><td colspan="3">No new messages.</td></tr>';
+      } else {
+        // Loop through the messages and display them in the table
+        messages.forEach(msg => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${msg.username}</td>
+            <td>${msg.email}</td>
+            <td>${msg.message}</td>
+          `;
+          messagesContainer.appendChild(row);
+        });
+      }
+    }
+
+    // Display messages when the page loads
+    displayMessages();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Received Information</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    td {
+      background-color: #fafafa;
+    }
+    button {
+      padding: 10px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bookings And Reservation</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Phone</th>
+        <th>Date & Time</th>
+        <th>Number of People</th>
+        <th>Comment</th>
+        <th>Received At</th>
+      </tr>
+    </thead>
+    <tbody id="infoTable"></tbody>
+  </table>
+
+  <button onclick="downloadInfo()">Download Information</button>
+
+  <script>
+    // Function to display the stored information
+    function displayInformation() {
+      const infoArray = JSON.parse(localStorage.getItem('infoArray')) || [];
+      const infoContainer = document.getElementById('infoTable');
+
+      // Clear the table container
+      infoContainer.innerHTML = '';
+
+      // If there are no records, show a message
+      if (infoArray.length === 0) {
+        infoContainer.innerHTML = '<tr><td colspan="6">No information available.</td></tr>';
+      } else {
+        // Loop through the stored data and create rows in the table
+        infoArray.forEach(info => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${info.fullname}</td>
+            <td>${info.phone}</td>
+            <td>${info.datetime}</td>
+            <td>${info.numPeople}</td>
+            <td>${info.comment}</td>
+            <td>${info.timestamp}</td> <!-- Show the timestamp when the message was collected -->
+          `;
+          infoContainer.appendChild(row);
+        });
+      }
+    }
+
+    // Function to download the stored information as a JSON file
+    function downloadInfo() {
+      const infoArray = JSON.parse(localStorage.getItem('infoArray')) || [];
+      const jsonData = JSON.stringify(infoArray, null, 2); // Pretty print JSON
+
+      // Create a Blob from the JSON data
+      const blob = new Blob([jsonData], { type: 'application/json' });
+
+      // Create an anchor tag for download
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'infoData.json'; // Name of the downloaded file
+      a.click(); // Trigger the download
+    }
+
+    // Display the information when the page loads
+    displayInformation();
+  </script>
+</body>
+</html>
